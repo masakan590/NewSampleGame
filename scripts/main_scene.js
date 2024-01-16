@@ -41,7 +41,7 @@ class MainScene extends Phaser.Scene {
 
         this.physics.add.overlap(taro, staticGroup, collectf, null, this);
         function collectf(){
-        //this.physics.pause(this.add.text(D_WIDTH/3,D_HEIGHT*1/3, 'Game Over!', { fontSize: '32px', fill: '#CDC' }));
+        this.physics.pause(this.add.text(D_WIDTH/3,D_HEIGHT*1/3, 'Game Over!', { fontSize: '32px', fill: '#CDC' }));
         }
         this.physics.add.overlap(hanako, staticGroup, collectf2, null, this);
         function collectf2(hanako,furit){
