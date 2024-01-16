@@ -34,12 +34,12 @@ class MainScene extends Phaser.Scene {
             const orange = staticGroup.create(randomX2, randomY2, 'orange');
             orange.setDisplaySize(50, 50);
 
-            this.physics.add.collider(taro, staticGroup, function (taro, fruit) {
-                this.physics.pause(); // ゲームを停止
+            this.physics.add.collider(taro, staticGroup,function (taro, fruit) {
+                 this.physics.pause(); // ゲームを停止
             }, this);
 
             this.physics.add.collider(hanako, staticGroup, function (hanako, fruit) {
-                fruit.destroy(); // フルーツを消す
+                this.physics.pause(); // ゲームを停止
             }, this);
         }
     }
